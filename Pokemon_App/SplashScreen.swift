@@ -13,17 +13,15 @@ class SplashScreen: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2 )
+        {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

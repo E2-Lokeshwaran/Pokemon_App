@@ -5,12 +5,6 @@
 //  Created by Lokeshwaran on 05/08/24.
 //
 
-//struct Mydata : Codable
-//{
-//    let name : String?
-//    let imageUrl : String?
-//}
-
 
 struct WelcomeElement: Codable {
     let number, name: String
@@ -78,16 +72,14 @@ enum TypeElement: String, Codable {
 import UIKit
 
 var dumpNum = ""
-var nameData : [String]!
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate
 {
 
     var indPath = 0
     
-    var searchData : [String]!
-    var json : [WelcomeElement]?
-    
+    var searchData : [WelcomeElement]?
+    var jsonData : [WelcomeElement]?
    
 
 
@@ -99,32 +91,41 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         ApiData()
-    }
+        
+        self.navigationItem.hidesBackButton = true
+        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        view.addGestureRecognizer(tap)
 
+    }
+    @objc func dismissKeyboard() 
+    {
+        view.endEditing(true)
+    }
 
     //TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 
     {
-        return json?.count ?? 0
+        return searchData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.PokemonType.text = json?[indexPath.row].name
+        cell.PokemonType.text = searchData?[indexPath.row].name
         
-        if let urlString = json?[indexPath.row].imageURL, let url = URL(string: urlString)
-        {
+        let urlString = searchData![indexPath.row].imageURL
+        let url = URL(string: urlString)!
+
             DispatchQueue.global().async 
             {
-                if let data = try? Data(contentsOf: url), let loadimg = UIImage(data: data) {
-                    DispatchQueue.main.async
-                    {
-                        cell.PokemonImage.image = loadimg
-                    }
+                let data = try? Data(contentsOf: url)
+                let loadimg = UIImage(data: data!)
+                DispatchQueue.main.async 
+                {
+                    cell.PokemonImage.image = loadimg
                 }
             }
-        }
         return cell
     }
     
@@ -136,16 +137,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         indPath = indexPath.row
-        dumpNum = (json?[indexPath.row].number)!
+        dumpNum = (searchData?[indexPath.row].number)!
         print("dumpurl-->",dumpNum)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsView") as? DetailsView
+        {
+            detailsVC.urlNum = dumpNum
+            navigationController?.pushViewController(detailsVC, animated: true)
+        }
     }
     
     //SearchBar
-
-    
-    
-    
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) 
+    {
+        if searchText.isEmpty
+        {
+            searchData = jsonData
+        }
+        else
+        {
+            searchData = jsonData?.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+        TableView.reloadData()
+        
+    }
     
     //API
     func ApiData()
@@ -157,7 +173,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 do
                 {
                     let content = try? JSONDecoder().decode([WelcomeElement].self ,from: data!)
-                    self.json = content
+                    self.jsonData = content
+                    self.searchData = content
                     DispatchQueue.main.async
                     {
                     self.TableView.reloadData()
