@@ -71,16 +71,16 @@ enum TypeElement: String, Codable {
 
 import UIKit
 
-var dumpNum = ""
+var tableNumber = ""
+
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate
 {
-
+ 
     var indPath = 0
     
     var searchData : [WelcomeElement]?
     var jsonData : [WelcomeElement]?
-   
 
 
     @IBOutlet weak var Searchbar: UISearchBar!
@@ -93,6 +93,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         ApiData()
         
         self.navigationItem.hidesBackButton = true
+
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 //        view.addGestureRecognizer(tap)
@@ -116,6 +117,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let urlString = searchData![indexPath.row].imageURL
         let url = URL(string: urlString)!
+        print("img url -->",url)
 
             DispatchQueue.global().async 
             {
@@ -137,16 +139,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         indPath = indexPath.row
-        dumpNum = (searchData?[indexPath.row].number)!
-        print("dumpurl-->",dumpNum)
+        tableNumber = (searchData?[indexPath.row].number)!
+        print("dumpurl-->",tableNumber)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsView") as? DetailsView
         {
-            detailsVC.urlNum = dumpNum
+            detailsVC.urlNumber = tableNumber
             navigationController?.pushViewController(detailsVC, animated: true)
         }
     }
+    
     
     //SearchBar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) 
