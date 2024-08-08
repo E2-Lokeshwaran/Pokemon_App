@@ -16,7 +16,8 @@ struct Pokemon: Codable
     
 }
 
-struct Card: Codable {
+struct Card: Codable 
+{
     let number: String
     let name: String
     let expansionName: String
@@ -40,6 +41,9 @@ class DetailsView: UIViewController,UICollectionViewDataSource,UICollectionViewD
     @IBOutlet weak var coverView: UIView!
     
     
+    private var currentCenterIndex: IndexPath?
+    private let zoomScale: CGFloat = 1.2
+    
     var urlNumber : String?
     var collectionData : [String] = ["Pokemon_Logo","Pokemon_Logo","Pokemon_Logo","Pokemon_Logo","Pokemon_Logo","Pokemon_Logo"]
     var cardImageUrls : [String] = []
@@ -58,6 +62,7 @@ class DetailsView: UIViewController,UICollectionViewDataSource,UICollectionViewD
         fetchDetails(urlString: url)
         detailView.layer.cornerRadius = 20
         coverView.layer.cornerRadius = 50
+
     }
     
     //Collection view delegates
@@ -82,8 +87,41 @@ class DetailsView: UIViewController,UICollectionViewDataSource,UICollectionViewD
                 cell.collectionImage.image = image
             }
         }
+        
+        // Apply zoom effect
+//         if indexPath == currentCenterIndex
+//        {
+//             cell.transform = CGAffineTransform(scaleX: zoomScale, y: zoomScale)
+//         }
+//        else
+//        {
+//            cell.transform = .identity
+//        }
+         
+        
     return cell
 }
+    
+    //Scroll for zoom
+//     func scrollViewDidScroll(_ scrollView: UIScrollView)
+//    {
+//        guard let collectionView = scrollView as? UICollectionView else 
+//        {
+//            return
+//        }
+//        let centerX = collectionView.contentOffset.x + (collectionView.frame.width / 2)
+//        let centerY = collectionView.contentOffset.y + (collectionView.frame.height / 2)
+//        let centerPoint = CGPoint(x: centerX, y: centerY)
+//
+//        if let indexPath = collectionView.indexPathForItem(at: centerPoint) 
+//        {
+//            if currentCenterIndex != indexPath
+//            {
+//                currentCenterIndex = indexPath
+//                collectionView.reloadData()
+//            }
+//        }
+//    }
     
     //API method
     func fetchDetails(urlString: String)

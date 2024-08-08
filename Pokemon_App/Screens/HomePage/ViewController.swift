@@ -92,11 +92,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Do any additional setup after loading the view.
         ApiData()
         
+//        guard let searchBar = Searchbar else {
+//            fatalError("Searchbar outlet is not connecteddddd")
+//            
+//        }
+        //SearchBar.delegate = self
         self.navigationItem.hidesBackButton = true
 
-        
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+
+        // Set up a tap gesture recognizer to dismiss the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
 
     }
     @objc func dismissKeyboard() 
@@ -117,7 +124,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let urlString = searchData![indexPath.row].imageURL
         let url = URL(string: urlString)!
-        print("img url -->",url)
+        
 
             DispatchQueue.global().async 
             {
@@ -164,6 +171,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         TableView.reloadData()
         
+    }
+    
+    // Dismiss keyboard when the search bar's "Search" button is clicked
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+
+    // Make sure the keyboard appears when starting to type in the search bar
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
     }
     
     //API

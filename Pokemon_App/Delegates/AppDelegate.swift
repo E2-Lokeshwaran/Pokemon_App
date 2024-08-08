@@ -10,10 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    //var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Start network monitoring
+//        CheckNetwork.shared.startMonitoring()
         return true
     }
 
@@ -32,5 +35,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    
 }
 
+//extension UIApplication {
+//    func topMostViewController() -> UIViewController? {
+//        guard var topController = keyWindow?.rootViewController else {
+//            return nil
+//        }
+//        
+//        while let presentedViewController = topController.presentedViewController {
+//            topController = presentedViewController
+//        }
+//        
+//        return topController
+//    }
+//}

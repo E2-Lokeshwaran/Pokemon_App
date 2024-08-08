@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6127BAB80675444E42A33801 /* Pods_Pokemon_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884AC83A52F446A0C02D6F63 /* Pods_Pokemon_App.framework */; };
-		6F57B7A02C6392FE00AA39E8 /* dump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F57B79F2C6392FE00AA39E8 /* dump.swift */; };
-		6F57B7A22C63987C00AA39E8 /* Poke_Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F57B7A12C63987C00AA39E8 /* Poke_Gif.gif */; };
 		6F6FA8A42C60C7AD0034E332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8A32C60C7AD0034E332 /* AppDelegate.swift */; };
 		6F6FA8A62C60C7AD0034E332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8A52C60C7AD0034E332 /* SceneDelegate.swift */; };
 		6F6FA8A82C60C7AD0034E332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8A72C60C7AD0034E332 /* ViewController.swift */; };
 		6F6FA8AB2C60C7AD0034E332 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FA8AA2C60C7AD0034E332 /* Base */; };
 		6F6FA8AD2C60C7AF0034E332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FA8AC2C60C7AF0034E332 /* Assets.xcassets */; };
-		6F6FA8B02C60C7AF0034E332 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FA8AF2C60C7AF0034E332 /* Base */; };
 		6F6FA8BB2C60C7AF0034E332 /* Pokemon_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8BA2C60C7AF0034E332 /* Pokemon_AppTests.swift */; };
 		6F6FA8C52C60C7AF0034E332 /* Pokemon_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8C42C60C7AF0034E332 /* Pokemon_AppUITests.swift */; };
 		6F6FA8C72C60C7AF0034E332 /* Pokemon_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA8C62C60C7AF0034E332 /* Pokemon_AppUITestsLaunchTests.swift */; };
@@ -24,6 +21,12 @@
 		6F818D832C6334FA00FE4783 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F818D822C6334FA00FE4783 /* SplashScreen.swift */; };
 		6F85D86D2C634876003D95E7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85D86C2C634876003D95E7 /* CollectionViewCell.swift */; };
 		6FE522D02C63A0A0003E2F05 /* Pikachu_Logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6FE522CF2C63A0A0003E2F05 /* Pikachu_Logo.gif */; };
+		6FF69F0E2C64C3A500C3714D /* No Internet.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6FF69F0D2C64C3A500C3714D /* No Internet.gif */; };
+		6FF69F0F2C64C44600C3714D /* NetworkReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF69F092C64C22C00C3714D /* NetworkReach.swift */; };
+		6FF69F112C64CE4A00C3714D /* CheckNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF69F102C64CE4A00C3714D /* CheckNetwork.swift */; };
+		6FF69F132C64CF8100C3714D /* NoNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF69F122C64CF8100C3714D /* NoNet.swift */; };
+		6FF69F1D2C64D3A100C3714D /* Poke_Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6FF69F1C2C64D3A100C3714D /* Poke_Gif.gif */; };
+		6FF69F232C64F09E00C3714D /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF69F222C64F09E00C3714D /* ViewControllerTest.swift */; };
 		A3D5B8FF44B1CCA628F491C9 /* Pods_Pokemon_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E37499F944B0649089A4641 /* Pods_Pokemon_AppTests.framework */; };
 		F755199260E680B566C9FECB /* Pods_Pokemon_App_Pokemon_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39C1482024EA14EF16A29EF /* Pods_Pokemon_App_Pokemon_AppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -50,15 +53,12 @@
 		40ED3F4DAB335F0645BE0968 /* Pods-Pokemon_App-Pokemon_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon_App-Pokemon_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Pokemon_App-Pokemon_AppUITests/Pods-Pokemon_App-Pokemon_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43C01C35E4345B10B678FAF3 /* Pods-Pokemon_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon_AppTests/Pods-Pokemon_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50298E3DF5D87B8838C5CB82 /* Pods-Pokemon_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon_App.release.xcconfig"; path = "Target Support Files/Pods-Pokemon_App/Pods-Pokemon_App.release.xcconfig"; sourceTree = "<group>"; };
-		6F57B79F2C6392FE00AA39E8 /* dump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dump.swift; sourceTree = "<group>"; };
-		6F57B7A12C63987C00AA39E8 /* Poke_Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Poke_Gif.gif; path = ../../../Poke_Gif.gif; sourceTree = "<group>"; };
 		6F6FA8A02C60C7AD0034E332 /* Pokemon_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FA8A32C60C7AD0034E332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F6FA8A52C60C7AD0034E332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6F6FA8A72C60C7AD0034E332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F6FA8AA2C60C7AD0034E332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F6FA8AC2C60C7AF0034E332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6F6FA8AF2C60C7AF0034E332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F6FA8B12C60C7AF0034E332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F6FA8B62C60C7AF0034E332 /* Pokemon_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pokemon_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FA8BA2C60C7AF0034E332 /* Pokemon_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon_AppTests.swift; sourceTree = "<group>"; };
@@ -70,6 +70,12 @@
 		6F818D822C6334FA00FE4783 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		6F85D86C2C634876003D95E7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6FE522CF2C63A0A0003E2F05 /* Pikachu_Logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Pikachu_Logo.gif; path = ../../../Pikachu_Logo.gif; sourceTree = "<group>"; };
+		6FF69F092C64C22C00C3714D /* NetworkReach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReach.swift; sourceTree = "<group>"; };
+		6FF69F0D2C64C3A500C3714D /* No Internet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "No Internet.gif"; path = "../../../No Internet.gif"; sourceTree = "<group>"; };
+		6FF69F102C64CE4A00C3714D /* CheckNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNetwork.swift; sourceTree = "<group>"; };
+		6FF69F122C64CF8100C3714D /* NoNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNet.swift; sourceTree = "<group>"; };
+		6FF69F1C2C64D3A100C3714D /* Poke_Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Poke_Gif.gif; path = ../../../../.Trash/Poke_Gif.gif; sourceTree = "<group>"; };
+		6FF69F222C64F09E00C3714D /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		7E37499F944B0649089A4641 /* Pods_Pokemon_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokemon_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804BDBBAD0C5B54D2807BF75 /* Pods-Pokemon_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon_App.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon_App/Pods-Pokemon_App.debug.xcconfig"; sourceTree = "<group>"; };
 		884AC83A52F446A0C02D6F63 /* Pods_Pokemon_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokemon_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,19 +149,15 @@
 		6F6FA8A22C60C7AD0034E332 /* Pokemon_App */ = {
 			isa = PBXGroup;
 			children = (
-				6F6FA8A32C60C7AD0034E332 /* AppDelegate.swift */,
-				6F6FA8A52C60C7AD0034E332 /* SceneDelegate.swift */,
-				6F6FA8A72C60C7AD0034E332 /* ViewController.swift */,
-				6F6FA8D52C60CB0D0034E332 /* DetailsView.swift */,
-				6F6FA8D32C60C9EF0034E332 /* TableViewCell.swift */,
-				6FE522CF2C63A0A0003E2F05 /* Pikachu_Logo.gif */,
-				6F57B7A12C63987C00AA39E8 /* Poke_Gif.gif */,
+				6FF69F1E2C64D3BF00C3714D /* Delegates */,
+				6FF69F152C64D2D800C3714D /* Screens */,
+				6FF69F142C64D2A900C3714D /* SplashScreen */,
+				6FF69F1F2C64D40200C3714D /* Network */,
 				6F6FA8A92C60C7AD0034E332 /* Main.storyboard */,
-				6F85D86C2C634876003D95E7 /* CollectionViewCell.swift */,
-				6F57B79F2C6392FE00AA39E8 /* dump.swift */,
-				6F818D822C6334FA00FE4783 /* SplashScreen.swift */,
+				6FE522CF2C63A0A0003E2F05 /* Pikachu_Logo.gif */,
+				6FF69F1C2C64D3A100C3714D /* Poke_Gif.gif */,
+				6FF69F0D2C64C3A500C3714D /* No Internet.gif */,
 				6F6FA8AC2C60C7AF0034E332 /* Assets.xcassets */,
-				6F6FA8AE2C60C7AF0034E332 /* LaunchScreen.storyboard */,
 				6F6FA8B12C60C7AF0034E332 /* Info.plist */,
 			);
 			path = Pokemon_App;
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				6F6FA8BA2C60C7AF0034E332 /* Pokemon_AppTests.swift */,
+				6FF69F222C64F09E00C3714D /* ViewControllerTest.swift */,
 			);
 			path = Pokemon_AppTests;
 			sourceTree = "<group>";
@@ -176,6 +179,60 @@
 				6F6FA8C62C60C7AF0034E332 /* Pokemon_AppUITestsLaunchTests.swift */,
 			);
 			path = Pokemon_AppUITests;
+			sourceTree = "<group>";
+		};
+		6FF69F142C64D2A900C3714D /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6F818D822C6334FA00FE4783 /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		6FF69F152C64D2D800C3714D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6FF69F162C64D2EC00C3714D /* HomePage */,
+				6FF69F172C64D30800C3714D /* DetailsPage */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6FF69F162C64D2EC00C3714D /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FA8A72C60C7AD0034E332 /* ViewController.swift */,
+				6F6FA8D32C60C9EF0034E332 /* TableViewCell.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		6FF69F172C64D30800C3714D /* DetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FA8D52C60CB0D0034E332 /* DetailsView.swift */,
+				6F85D86C2C634876003D95E7 /* CollectionViewCell.swift */,
+			);
+			path = DetailsPage;
+			sourceTree = "<group>";
+		};
+		6FF69F1E2C64D3BF00C3714D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FA8A32C60C7AD0034E332 /* AppDelegate.swift */,
+				6F6FA8A52C60C7AD0034E332 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6FF69F1F2C64D40200C3714D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6FF69F102C64CE4A00C3714D /* CheckNetwork.swift */,
+				6FF69F092C64C22C00C3714D /* NetworkReach.swift */,
+				6FF69F122C64CF8100C3714D /* NoNet.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AA2F81686CEA7684E3C98908 /* Frameworks */ = {
@@ -297,10 +354,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F57B7A22C63987C00AA39E8 /* Poke_Gif.gif in Resources */,
+				6FF69F1D2C64D3A100C3714D /* Poke_Gif.gif in Resources */,
 				6F6FA8AD2C60C7AF0034E332 /* Assets.xcassets in Resources */,
 				6FE522D02C63A0A0003E2F05 /* Pikachu_Logo.gif in Resources */,
-				6F6FA8B02C60C7AF0034E332 /* Base in Resources */,
+				6FF69F0E2C64C3A500C3714D /* No Internet.gif in Resources */,
 				6F6FA8AB2C60C7AD0034E332 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,10 +486,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF69F132C64CF8100C3714D /* NoNet.swift in Sources */,
+				6FF69F112C64CE4A00C3714D /* CheckNetwork.swift in Sources */,
 				6F818D832C6334FA00FE4783 /* SplashScreen.swift in Sources */,
 				6F6FA8A82C60C7AD0034E332 /* ViewController.swift in Sources */,
+				6FF69F0F2C64C44600C3714D /* NetworkReach.swift in Sources */,
 				6F6FA8D62C60CB0D0034E332 /* DetailsView.swift in Sources */,
-				6F57B7A02C6392FE00AA39E8 /* dump.swift in Sources */,
 				6F85D86D2C634876003D95E7 /* CollectionViewCell.swift in Sources */,
 				6F6FA8D42C60C9EF0034E332 /* TableViewCell.swift in Sources */,
 				6F6FA8A42C60C7AD0034E332 /* AppDelegate.swift in Sources */,
@@ -444,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF69F232C64F09E00C3714D /* ViewControllerTest.swift in Sources */,
 				6F6FA8BB2C60C7AF0034E332 /* Pokemon_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,14 +539,6 @@
 				6F6FA8AA2C60C7AD0034E332 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6F6FA8AE2C60C7AF0034E332 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F6FA8AF2C60C7AF0034E332 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -529,7 +581,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -592,7 +644,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -626,8 +678,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,8 +709,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
