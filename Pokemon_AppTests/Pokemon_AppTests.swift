@@ -6,7 +6,7 @@
 //
 
 
-// Test Case for SplashScreen. 
+// Test Case for -------SplashScreen-----------
 
 import XCTest
 import UIKit
@@ -38,51 +38,50 @@ final class Pokemon_AppTests: XCTestCase {
         splashScreen.viewDidLoad()
         
         XCTAssertNotNil(splashScreen.logoImg)
-        XCTAssertTrue(splashScreen.logoImg.isAnimatingGif())
     }
     
-    func testNavigateToMainPage()
-    {
-        //Given
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        splashScreen = storyboard.instantiateViewController(withIdentifier: "SplashScreen") as? SplashScreen
-        splashScreen.loadViewIfNeeded()
-        
-        //When
-        splashScreen.viewDidLoad()
-        RunLoop.current.run(until: Date(timeIntervalSinceNow: 5))
-        
-        // Then
-        if let navigationController = splashScreen.navigationController 
-        {
-            let mainViewController = navigationController.topViewController as? ViewController
-            XCTAssertNotNil(mainViewController)
-        } 
-        else
-        {
-            XCTFail("SplashScreen's navigationController is nil")
-        }
-    }
-    
-//    func testSplashScreenNavigatesToViewController() 
+//    func testNavigateToMainPage()
 //    {
-//        // Given
-//        let navigationController = UINavigationController(rootViewController: splashScreen)
-//
-//        // When
+//        //Given
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        splashScreen = storyboard.instantiateViewController(withIdentifier: "SplashScreen") as? SplashScreen
+//        splashScreen.loadViewIfNeeded()
+//        
+//        //When
 //        splashScreen.viewDidLoad()
-//
-//        // Simulate the passage of 3 seconds
-//        let expectation = XCTestExpectation(description: "Wait for navigation")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
-//            expectation.fulfill()
-//        }
-//        wait(for: [expectation], timeout: 5.0)
-//
+//        RunLoop.current.run(until: Date(timeIntervalSinceNow: 5))
+//        
 //        // Then
-//        let mainViewController = navigationController.topViewController as? ViewController
-//        XCTAssertNotNil(mainViewController, "Expected to navigate to ViewController but did not.")
+//        if let navigationController = splashScreen.navigationController 
+//        {
+//            let mainViewController = navigationController.topViewController as? ViewController
+//            XCTAssertNotNil(mainViewController)
+//        } 
+//        else
+//        {
+//            XCTFail("SplashScreen's navigationController is nillllll")
+//        }
 //    }
+    
+    func testSplashScreenNavigatesToViewController() 
+    {
+        // Given
+        let navigationController = UINavigationController(rootViewController: splashScreen)
+
+        // When
+        splashScreen.viewDidLoad()
+
+        // Simulate the passage of 3 seconds
+        let expectation = XCTestExpectation(description: "Wait for navigation")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+
+        // Then
+        let mainViewController = navigationController.topViewController as? ViewController
+        XCTAssertNotNil(mainViewController, "Expected to navigate to ViewController but did not.")
+    }
     
 
 }

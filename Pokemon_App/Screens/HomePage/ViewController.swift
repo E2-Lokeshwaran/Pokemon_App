@@ -87,26 +87,64 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var TableView: UITableView!
     
     
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//        ApiData()
+////        
+////        guard Searchbar != nil else 
+////        {
+////            fatalError("Searchbar outlet is not connecteddddd")
+////        }
+//        Searchbar.delegate = self
+//        
+//        self.navigationItem.hidesBackButton = true
+//
+//        // Set up a tap gesture recognizer to dismiss the keyboard
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        tapGesture.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tapGesture)
+//
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        print("ViewDidLoad started")
+        
+        // Check if view is loaded
+        if isViewLoaded {
+            print("View is loaded")
+        } else {
+            print("View is not loaded")
+        }
+        
+        // Check Searchbar
+        if let searchBar = Searchbar {
+            print("Searchbar is connected")
+            searchBar.delegate = self
+        } else {
+            print("Error: Searchbar is nil")
+        }
+        
+        // Check TableView
+        if let tableView = TableView {
+            print("TableView is connected")
+        } else {
+            print("Error: TableView is nil")
+        }
+        
         ApiData()
         
-//        guard let searchBar = Searchbar else {
-//            fatalError("Searchbar outlet is not connecteddddd")
-//            
-//        }
-        //SearchBar.delegate = self
         self.navigationItem.hidesBackButton = true
-
-
-        // Set up a tap gesture recognizer to dismiss the keyboard
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
-
+        
+        print("ViewDidLoad completed")
     }
-    @objc func dismissKeyboard() 
+    @objc func dismissKeyboard()
     {
         view.endEditing(true)
     }
@@ -174,12 +212,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     // Dismiss keyboard when the search bar's "Search" button is clicked
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) 
+    {
         searchBar.resignFirstResponder()
     }
 
     // Make sure the keyboard appears when starting to type in the search bar
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool
+    {
         return true
     }
     

@@ -17,40 +17,30 @@ class SplashScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
 //        do {
 //            let gif = try UIImage(gifName: "Poke_Gif")
-//            self.logoImg.setGifImage(gif, loopCount: -1)
-//        }
-//        catch
-//        {
+//            let imageview = UIImageView(gifImage: gif, loopCount: 3) // Will loop 3 times
+//            imageview.frame = logoImg.bounds
+//            logoImg.addSubview(imageview)
+//        } catch {
 //            print(error)
 //        }
-        do {
-            let gif = try UIImage(gifName: "Poke_Gif")
-            let imageview = UIImageView(gifImage: gif, loopCount: 3) // Will loop 3 times
-            imageview.frame = view.bounds
-            view.addSubview(imageview)
-        } catch {
-            print(error)
-        }
-
         
-//        do {
-//            if let gif = try? UIImage(gifName: "Poke_Gif")
-//            {
-//                self.logoImg.setGifImage(gif, loopCount: -1)
-//            } 
-//            else
-//            {
-//                print("Unable to load GIF image")
-//            }
-//        } 
-//        catch
-//        {
-//            print("Error loading GIF image: \(error)")
-//        }
+        if let logoImg = logoImg {
+            do {
+                if let gif = try? UIImage(gifName: "Poke_Main_logo") {
+                    let imageView = UIImageView(gifImage: gif, loopCount: 3) // Will loop 3 times
+                    imageView.frame = logoImg.bounds
+                    logoImg.addSubview(imageView)
+                } else {
+                    print("Failed to load GIF image")
+                }
+            } catch {
+                print("Error: \(error)")
+            }
+        } else {
+            print("logoImg is nil")
+        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3 )
         {

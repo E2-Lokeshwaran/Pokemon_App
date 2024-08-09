@@ -59,9 +59,10 @@ class DetailsView: UIViewController,UICollectionViewDataSource,UICollectionViewD
         let url = "https://pokedex.alansantos.dev/api/pokemons/" + urlNumber! + ".json"
         print("urls ->",url)
         
+        
         fetchDetails(urlString: url)
-        detailView.layer.cornerRadius = 20
-        coverView.layer.cornerRadius = 50
+        //detailView.layer.cornerRadius = 20
+        //coverView.layer.cornerRadius = 50
 
     }
     
@@ -206,8 +207,8 @@ class DetailsView: UIViewController,UICollectionViewDataSource,UICollectionViewD
 //    }
     
     // Fetch image
-// Fetch image
-func fetchImage(from url: URL, completion: @escaping (UIImage?) -> Void) 
+func fetchImage(from url: URL, completion: @escaping (UIImage?) -> Void)
+
 {
     URLSession.shared.dataTask(with: url) 
     {
